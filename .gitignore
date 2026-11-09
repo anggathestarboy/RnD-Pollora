@@ -1,0 +1,69 @@
+*.log
+# Git Ignore File
+
+## Logs and debug files
+npm-debug.log
+yarn-error.log
+
+## Environment and local configuration files
+.env
+.env.backup
+.env.production
+auth.json
+composer.local.json
+
+## Development tools specific files
+.phpstorm.meta.php
+_ide_helper.php
+.phpunit.result.cache
+/.phpunit.cache
+Taskfile.yml
+Homestead.json
+Homestead.yaml
+
+## IDE specific files
+/.idea
+/.vscode
+/.nova
+/.fleet
+
+## Containers and Docker development specific files
+/.ddev/*
+# The decoy server the install integration tests need is part of the suite,
+# so it is versioned; the rest of .ddev stays local.
+!/.ddev/docker-compose.decoy.yaml
+!/.ddev/decoy/
+.docker
+.data
+
+## Project dependencies
+node_modules
+/vendor
+
+## Compiled assets and public caches
+/public/build
+/public/cms
+/public/hot
+/public/storage
+/public/content/cache
+/public/content/wp-rocket-config
+
+## WordPress specific caches
+/public/content/object-cache.php
+/public/content/advanced-cache.php
+
+## Keys and sensitive files
+/storage/*.key
+/storage/pail
+
+## Themes (created via pollora:make:theme, not versioned in skeleton)
+/themes/*
+!/themes/.gitkeep
+
+## Pollora binary (published via vendor:publish)
+/pollora
+
+## Other unversioned files
+*.sql
+global_rules.md
+*.timestamp-*.mjs
